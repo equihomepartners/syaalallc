@@ -1,13 +1,13 @@
 [build]
   command = "npm run build"
   publish = ".next"
-
-[build.environment]
-  NEXT_PUBLIC_NODE_VERSION = "18.17.0"
-  NODE_VERSION = "18.17.0"
+  environment = { NODE_VERSION = "18.17.0" }
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NEXT_TELEMETRY_DISABLED = "1"
 
 [[headers]]
   for = "/*"
@@ -16,4 +16,4 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.app; img-src 'self' data: blob: *.netlify.app; font-src 'self' data: *.netlify.app;" 
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' *.netlify.app; img-src 'self' data: blob: *.netlify.app; font-src 'self' data: *.netlify.app; connect-src 'self' *.netlify.app;" 
