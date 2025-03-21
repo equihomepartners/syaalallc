@@ -49,7 +49,7 @@ const projects = [
     id: 'stgabriel',
     title: 'St. Gabriel',
     description: 'Individual Web Platform',
-    image: '/St.Gabriel Restaurant.png',
+    image: '/StGabriel.png',
     category: 'Web Application',
     link: 'https://stgabriel.com'
   }
