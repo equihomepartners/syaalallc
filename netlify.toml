@@ -1,13 +1,14 @@
 [build]
   command = "npm run build"
-  publish = ".next"
-  environment = { NODE_VERSION = "18.17.0" }
+  publish = "out"
+  environment = { NODE_VERSION = "18.18.0" }
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
 [build.environment]
   NEXT_TELEMETRY_DISABLED = "1"
+  NEXT_PUBLIC_URL = "https://syaalallc.com"
 
 [[headers]]
   for = "/*"
