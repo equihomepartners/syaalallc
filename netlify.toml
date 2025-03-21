@@ -6,9 +6,7 @@
   NODE_VERSION = "18.18.0"
   NEXT_TELEMETRY_DISABLED = "1"
   NEXT_PUBLIC_URL = "https://syaalallc.com"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 [[headers]]
   for = "/*"

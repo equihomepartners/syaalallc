@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  distDir: '.next',
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -10,13 +9,6 @@ const nextConfig = {
         hostname: '**',
       },
     ],
-  },
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.(svg|png|jpg|jpeg|gif)$/,
-      type: 'asset/resource',
-    })
-    return config
   },
   typescript: {
     ignoreBuildErrors: true,
